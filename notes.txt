@@ -1,0 +1,37 @@
+-> Algorithm to evalutate infinix expression
+1. if the character is an operand, push it to the operand stack
+2. If the character is an operator{
+    a. If the operator stack is empty then push it to the operator stack
+    b. Else if the operator stack is not empty{
+        i. If the character precedence is greater than the precedence of the operator available in the stack top, then push the character to the operator stack
+        ii. If the character precedence is less than or equal to the precedence of the operator available in the stack top then do process:{
+            ai. Pop two values from the top of operand stack and store them in x & Y
+            bii. Pop operator from the stack
+            ciii. Perform arithmetic operation between x and y and store result in z
+            div.  Push result in operand stack
+        do Process until character's precedence is less or stack is not empty
+        } 
+    }
+}
+3. If the character is "(" then push it onto the operator stack
+4. If the character is ")" then do Process(as explained above)until the corressponding "("is encountered in operator stack. Now just pop out the "("
+
+Once the expression iteration is completed and the operator stack is not empty, do Prcoess until the operator stack is empty. The values left in the operand stack is our final result
+
+Queue:-
+1. The Queue is a linear data structure or and an abstract data type
+2. It follows hte FIFO - "First in First out" or LILO - "Last in Last out"method to process the data.
+3. Unlike Stack, Queue has two ends REAR and FRONT.
+4. The REAR end is always used to insert the data i.e enqueue, and the FRONT end is used to remove the data insertes i.e dequeue.
+
+Operation on Queue:
+1. Enqueue()- Insertion of elements to the Queue
+2. Dequeue()- Return & remove element from the Queue
+3. Peek()- Acquires the data element available at the front of the Queue without deleting it
+4. isFull()- Validates if the queue is isFull
+4. isNull()- checks if the queue is empty
+
+Algorithm:-
+step 1: check if the queue is ful(Rear+1% Maxsize = front)
+step 2: if the queue is full, there will be and Overflow error
+step 3: check if the queu
